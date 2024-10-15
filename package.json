@@ -1,0 +1,17 @@
+{
+  "name": "wayord",
+  "version": "0.11",
+  "description": "Enjoy your time with wayord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wayord"
+  ],
+  "author": "Wayord Team",
+  "license": "ISC",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}

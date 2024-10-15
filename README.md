@@ -8,5 +8,6 @@ Es una aplicación de Wayord, que se desarrolla para ofrecer los últimos produc
 
 ### 📋 Lista de tareas
 - [x] Inicio del repositorio
-- [ ] Crear el index.html
-- [ ] Configurar la primera plantilla
+- [x] Crear el index.html
+- [x] Configurar la primera plantilla
+- [ ] Agregar los primeros productos

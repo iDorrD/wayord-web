@@ -1,0 +1,9 @@
+
+@media (max-width: 980px){
+    .background-video{
+        display: none!important;
+    }
+    .launcher-button{
+        padding: 10px 3.5em;
+    }
+}
