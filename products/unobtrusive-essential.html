@@ -1,95 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
-    
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico" />
+
     <script src="https://kit.fontawesome.com/eda7ccd337.js" crossorigin="anonymous"></script>
 </head>
-<body style="overflow: auto;">
+
+<body style="overflow: auto">
     <div id="checkout" class="checkout">
         <form method="post" action="https://modrinth.com/resourcepack/unobtrusive-essential/version/iLW9GBS5">
-        <div style="margin-left: auto;margin-right: auto;max-width: 1440px;">
-            <div class="checkout-grid" style="margin-top: 80px;">
-                <div class="checkout-content">
-                    <p class="exit-checkout " style="color: gray;cursor: pointer;">
-                        <i class="fa-solid fa-chevron-left" style="color: gray;"></i> 
-                    </p>
-                    
-                    <h2>Checkout</h2>
-                    <h3>1. Select your platform</h3>
+            <div style="margin-left: auto; margin-right: auto; max-width: 1440px">
+                <div class="checkout-grid" style="margin-top: 80px">
+                    <div class="checkout-content">
+                        <p class="exit-checkout" style="color: gray; cursor: pointer">
+                            <i class="fa-solid fa-chevron-left" style="color: gray"></i>
+                        </p>
 
-                    <div class="button-container" id="minecraft-premium">
-                        <label class="button-item" id="minecraft-nopremium">
-                            <input type="radio" name="select-btn" class="radio-btn" />
-                            <div class="content">
-                              <img src="https://docs.modrinth.com/img/logo.svg" alt="Modrinth" style="width: 50px;margin: 10px;">
-                              <p>Modrinth</p>
-                            </div>
-                        </label>
+                        <h2>Checkout</h2>
+                        <h3>1. Select your platform</h3>
 
-                        <label class="button-item">
-                          <input type="radio" name="select-btn" class="radio-btn" required disabled/>
-                          <div class="content">
-                            <img src="../src/img/wayord-transparent.png" width="10px" style="filter: brightness(100);margin: 10px;" alt="Minecraft" />
-                            <p>Wayord Store</p>
-                          </div>
-                        </label>
-                    
-                      </div>
-                      <h3>2. Enter your username</h3>
-                      <div style="display: block;">
-                        <input type="text" name="username" class="username" placeholder="Wayord" pattern="[a-zA-Z0-9-]+" maxlength="32" required>
-                      </div>
-                </div>
-                <div class="order-summary">
-                    <h3>Order Summary</h3>
-                    <img class="order-summary-img" src="" width="390px" style="border-radius: 18px;">
-                    <span class="order-summary-name" style="font-weight: 700;font-size: 18px;"></span>
-                    <hr color="gray">
-                    <br>
-                    <input type="submit" id="buy" target="_blank" class="menu buy-header" style="cursor: pointer;padding: 1em 10em;border-radius: 24px;" name="Buy now" value="Buy now">
-                    <br>
-                    <!-- <p style="color: gray;font-size: 12px;padding-top: 10px;">In-game Purchases (Includes Random Items)</p> -->
+                        <div class="button-container" id="minecraft-premium">
+                            <label class="button-item" id="minecraft-nopremium">
+                                <input type="radio" name="select-btn" class="radio-btn" />
+                                <div class="content">
+                                    <img src="https://docs.modrinth.com/img/logo.svg" alt="Modrinth"
+                                        style="width: 50px; margin: 10px" />
+                                    <p>Modrinth</p>
+                                </div>
+                            </label>
+
+                            <label class="button-item">
+                                <input type="radio" name="select-btn" class="radio-btn" required disabled />
+                                <div class="content">
+                                    <img src="../src/img/wayord-transparent.png" width="10px"
+                                        style="filter: brightness(100); margin: 10px" alt="Minecraft" />
+                                    <p>Wayord Store</p>
+                                </div>
+                            </label>
+                        </div>
+                        <h3>2. Enter your username</h3>
+                        <div style="display: block">
+                            <input type="text" name="username" class="username" placeholder="Wayord"
+                                pattern="[a-zA-Z0-9-]+" maxlength="32" required />
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <img class="order-summary-img" src="" width="390px" style="border-radius: 18px" />
+                        <span class="order-summary-name" style="font-weight: 700; font-size: 18px"></span>
+                        <hr color="gray" />
+                        <br />
+                        <input type="submit" id="buy" target="_blank" class="menu buy-header"
+                            style="cursor: pointer; padding: 1em 10em; border-radius: 24px" name="Buy now"
+                            value="Buy now" />
+                        <br />
+                        <!-- <p style="color: gray;font-size: 12px;padding-top: 10px;">In-game Purchases (Includes Random Items)</p> -->
+                    </div>
                 </div>
             </div>
-        </div>
         </form>
     </div>
     <header>
         <div>
             <a href="/">
-                <img src="/src/img/wayord-transparent.png" alt="Wayord" draggable="false" style="padding-top: 3px;">
+                <img src="/src/img/wayord-transparent.png" alt="Wayord" draggable="false" style="padding-top: 3px" />
             </a>
         </div>
         <div>
             <a href="https://x.com/Wayord" target="_blank" class="menu">X/Twitter</a>
-            <a id="buy" target="_blank" class="menu buy-header" onclick="openCheckout()" style="cursor: pointer;">Download now</a>
+            <a id="buy" target="_blank" class="menu buy-header" onclick="openCheckout()"
+                style="cursor: pointer">Download now</a>
         </div>
     </header>
     <!-- Product header -->
     <section class="header">
         <h1 class="pro-name"></h1>
     </section>
-    
+
     <section class="product">
-        <img class="cover-img" src="" style="border-radius: 16px;" width="1080px">
+        <img class="cover-img" src="" style="border-radius: 16px" width="1080px" />
         <div class="product-information">
-            <img style="border-radius: 16px;" width="300px" class="cover" src="">
+            <img style="border-radius: 16px" width="300px" class="cover" src="" />
             <div>
-                <div style="display: flex;">
+                <div style="display: flex">
                     <div class="p-base">Base</div>
                 </div>
-                
-                <p style="font-size: 14px;">On Wayord starting from</p>
+
+                <p style="font-size: 14px">On Wayord starting from</p>
                 <span class="price"></span>
-                <p style="color: gray;font-size: 11px;">Applicable taxes may apply</p>
-                <br>
-                <a id="buy" class="buy" onclick="openCheckout()" style="cursor: pointer;">Buy now</a>
-                <p style="font-size: 12px;line-height: 20px;color: gray;">In-game Purchases (Includes Random Items)</p>
+                <p style="color: gray; font-size: 11px">Applicable taxes may apply</p>
+                <br />
+                <a id="buy" class="buy" onclick="openCheckout()" style="cursor: pointer">Buy now</a>
+                <p style="font-size: 12px; line-height: 20px; color: gray">
+                    In-game Purchases (Includes Random Items)
+                </p>
             </div>
         </div>
     </section>
@@ -98,7 +107,7 @@
         <h2>Editions</h2>
         <div class="edition">
             <div>
-                <img width="300px" class="cover2" src="">
+                <img width="300px" class="cover2" src="" />
                 <span>Standard Edition</span>
                 <li>EA SPORTS™ Madden NFL 25</li>
             </div>
@@ -119,40 +128,62 @@
     <!-- Product JS -->
     <script src="../src/js/script.js"></script>
     <script>
-        const Product={
+        const Product = {
             name: "Unobtrusive Essential",
-            price: 0.00,
+            price: 0.0,
             games: ["Minecraft"],
-            about: "Unobtrusive Essential is an optimisation resource pack for Minecraft 1.20+ that improves performance and reduces lag. <br>Disabling unnecessary particles and changes particles by reducing their quantity.<br>The resource pack is perfect to your Survival and/or optimize your game.",
-            languages: ["English","Spanish","French","German","Italian","Japanese","Korean","Dutch","Polish","Portuguese","Russian","Chinese"],
-            video: ["https://cdn.modrinth.com/data/cached_images/4ebace599addc235c52980f3b55d2c61570e1140.png","https://cdn.modrinth.com/data/cached_images/df59049d7a9d79278500a0f7fd0f5aedf8753f7a.png","https://cdn.modrinth.com/data/cached_images/b723ba8148ee5e3a8f6152148be06b0cd56c6a8f.png","https://cdn.modrinth.com/data/cached_images/d25867a18184090b13ea79d6ca3a4d86f5cc1087.png"],
+            about:
+                "Unobtrusive Essential is an optimisation resource pack for Minecraft 1.20+ that improves performance and reduces lag. <br>Disabling unnecessary particles and changes particles by reducing their quantity.<br>The resource pack is perfect to your Survival and/or optimize your game.",
+            languages: [
+                "English",
+                "Spanish",
+                "French",
+                "German",
+                "Italian",
+                "Japanese",
+                "Korean",
+                "Dutch",
+                "Polish",
+                "Portuguese",
+                "Russian",
+                "Chinese",
+            ],
+            video: [
+                "https://cdn.modrinth.com/data/cached_images/4ebace599addc235c52980f3b55d2c61570e1140.png",
+                "https://cdn.modrinth.com/data/cached_images/df59049d7a9d79278500a0f7fd0f5aedf8753f7a.png",
+                "https://cdn.modrinth.com/data/cached_images/b723ba8148ee5e3a8f6152148be06b0cd56c6a8f.png",
+                "https://cdn.modrinth.com/data/cached_images/d25867a18184090b13ea79d6ca3a4d86f5cc1087.png",
+            ],
             cover: "imgs/UnobtrusiveEssential.png",
             editions: false,
-            publisher: "DorrD"
-        }
-        document.title = Product.name+" - Wayord";
+            publisher: "DorrD",
+        };
+        document.title = Product.name + " - Wayord";
         document.querySelector(".pro-name").innerHTML = Product.name;
         document.querySelector(".pro-about").innerHTML = Product.about;
         document.querySelector(".pro-games").innerHTML = Product.games.join(", ");
-        document.querySelector(".pro-langs").innerHTML = Product.languages.join(", ");
+        document.querySelector(".pro-langs").innerHTML =
+            Product.languages.join(", ");
         document.querySelector(".pro-publisher").innerHTML = Product.publisher;
-        document.querySelector(".price").innerHTML = `€<span style="font-size: 26.5px;">${Product.price}</span>`;
+        document.querySelector(
+            ".price"
+        ).innerHTML = `€<span style="font-size: 26.5px;">${Product.price}</span>`;
         // document.querySelector(".cover-img").src = Product.video[0];
         document.querySelector(".cover").src = Product.cover;
         document.querySelector(".cover2").src = Product.cover;
         document.querySelector(".order-summary-img").src = Product.cover;
         document.querySelector(".order-summary-name").innerHTML = Product.name;
-        if(Product.editions==true){
+        if (Product.editions == true) {
             document.querySelector(".editions").style.display = "block";
         }
-        if(Product.price>0){
+        if (Product.price > 0) {
             document.querySelector(".buy").textContent = "Buy now";
-        }else{
+        } else {
             document.querySelector(".buy").textContent = "Download now";
         }
 
         let currentIndex = 0;
-        function changeImage(){
+        function changeImage() {
             const coverImg = document.querySelector(".cover-img");
             if (coverImg && Product.video.length > 0) {
                 coverImg.src = Product.video[currentIndex];
@@ -165,7 +196,7 @@
 
         // Inicializa la primera imagen
         changeImage();
-        
     </script>
 </body>
+
 </html>

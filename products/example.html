@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example - Wayord</title>
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="icon" type="image/x-icon" href="../src/img/favicon.ico">
-    
+
     <script src="https://kit.fontawesome.com/eda7ccd337.js" crossorigin="anonymous"></script>
 </head>
+
 <body style="overflow: auto;">
     <div id="checkout" class="checkout">
         <form method="post" action="https://formspree.io/f/xqakzpnj">
-        <div style="margin-left: auto;margin-right: auto;max-width: 1440px;">
-            <div class="checkout-grid" style="margin-top: 80px;">
-                <div class="checkout-content">
-                    <p class="exit-checkout " style="color: gray;cursor: pointer;">
-                        <i class="fa-solid fa-chevron-left" style="color: gray;"></i> 
-                    </p>
-                    
-                    <h2>Checkout</h2>
-                    <h3>1. Select your game</h3>
+            <div style="margin-left: auto;margin-right: auto;max-width: 1440px;">
+                <div class="checkout-grid" style="margin-top: 80px;">
+                    <div class="checkout-content">
+                        <p class="exit-checkout " style="color: gray;cursor: pointer;">
+                            <i class="fa-solid fa-chevron-left" style="color: gray;"></i>
+                        </p>
 
-                    <div class="button-container" id="minecraft-premium">
-                        <label class="button-item">
-                          <input type="radio" name="select-btn" class="radio-btn" required/>
-                          <div class="content">
-                            <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png" alt="Minecraft" />
-                            <p>Minecraft: Java Edition (Premium)</p>
-                          </div>
-                        </label>
-                    
-                        <label class="button-item" id="minecraft-nopremium">
-                            <input type="radio" name="select-btn" class="radio-btn" />
-                            <div class="content">
-                              <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png" alt="Minecraft" />
-                              <p>Minecraft: Java Edition (No-Premium)</p>
-                            </div>
-                        </label>
+                        <h2>Checkout</h2>
+                        <h3>1. Select your game</h3>
 
-                        <label class="button-item" id="minecraft-bedrock">
-                            <input type="radio" name="select-btn" class="radio-btn" />
-                            <div class="content">
-                              <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png" alt="Minecraft" />
-                              <p>Minecraft: Bedrock Edition</p>
-                            </div>
-                        </label>
-                      </div>
-                      <h3>2. Enter your username</h3>
-                      <div style="display: block;">
-                        <input type="text" name="username" class="username" placeholder="Wayord" pattern="[a-zA-Z0-9-]+" maxlength="32" required>
-                      </div>
-                </div>
-                <div class="order-summary">
-                    <h3>2. Order Summary</h3>
-                    <img class="order-summary-img" src="" width="390px" style="border-radius: 18px;">
-                    <span class="order-summary-name" style="font-weight: 700;font-size: 18px;"></span>
-                    <hr color="gray">
-                    <br>
-                    <input type="submit" id="buy" target="_blank" class="menu buy-header" style="cursor: pointer;padding: 1em 10em;border-radius: 24px;" name="Buy now" value="Buy now">
-                    <br>
-                    <p style="color: gray;font-size: 12px;padding-top: 10px;">In-game Purchases (Includes Random Items)</p>
+                        <div class="button-container" id="minecraft-premium">
+                            <label class="button-item">
+                                <input type="radio" name="select-btn" class="radio-btn" required />
+                                <div class="content">
+                                    <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png"
+                                        alt="Minecraft" />
+                                    <p>Minecraft: Java Edition (Premium)</p>
+                                </div>
+                            </label>
+
+                            <label class="button-item" id="minecraft-nopremium">
+                                <input type="radio" name="select-btn" class="radio-btn" />
+                                <div class="content">
+                                    <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png"
+                                        alt="Minecraft" />
+                                    <p>Minecraft: Java Edition (No-Premium)</p>
+                                </div>
+                            </label>
+
+                            <label class="button-item" id="minecraft-bedrock">
+                                <input type="radio" name="select-btn" class="radio-btn" />
+                                <div class="content">
+                                    <img src="https://logolook.net/wp-content/uploads/2023/10/Minecraft-Logo-2016.png"
+                                        alt="Minecraft" />
+                                    <p>Minecraft: Bedrock Edition</p>
+                                </div>
+                            </label>
+                        </div>
+                        <h3>2. Enter your username</h3>
+                        <div style="display: block;">
+                            <input type="text" name="username" class="username" placeholder="Wayord"
+                                pattern="[a-zA-Z0-9-]+" maxlength="32" required>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <h3>2. Order Summary</h3>
+                        <img class="order-summary-img" src="" width="390px" style="border-radius: 18px;">
+                        <span class="order-summary-name" style="font-weight: 700;font-size: 18px;"></span>
+                        <hr color="gray">
+                        <br>
+                        <input type="submit" id="buy" target="_blank" class="menu buy-header"
+                            style="cursor: pointer;padding: 1em 10em;border-radius: 24px;" name="Buy now"
+                            value="Buy now">
+                        <br>
+                        <p style="color: gray;font-size: 12px;padding-top: 10px;">In-game Purchases (Includes Random
+                            Items)</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </form>
     </div>
     <header>
@@ -74,14 +83,15 @@
         </div>
         <div>
             <a href="https://x.com/Wayord" target="_blank" class="menu">X/Twitter</a>
-            <a id="buy" target="_blank" class="menu buy-header" onclick="openCheckout()" style="cursor: pointer;">Buy now</a>
+            <a id="buy" target="_blank" class="menu buy-header" onclick="openCheckout()" style="cursor: pointer;">Buy
+                now</a>
         </div>
     </header>
     <!-- Product header -->
     <section class="header">
         <h1 class="pro-name"></h1>
     </section>
-    
+
     <section class="product">
         <video controls autoplay src="" width="1080px" style="border-radius: 16px;"></video>
         <div class="product-information">
@@ -90,7 +100,7 @@
                 <div style="display: flex;">
                     <div class="p-base">Base</div>
                 </div>
-                
+
                 <p style="font-size: 14px;">On Wayord starting from</p>
                 <span class="price"></span>
                 <p style="color: gray;font-size: 11px;">Applicable taxes may apply</p>
@@ -126,18 +136,18 @@
     <!-- Product JS -->
     <script src="../src/js/script.js"></script>
     <script>
-        const Product={
+        const Product = {
             name: "Patata",
             price: 9.99,
             games: ["Minecraft"],
             about: "La mejor patata del mundo",
-            languages: ["English","Spanish"],
+            languages: ["English", "Spanish"],
             video: "../src/video/video1.mp4",
             cover: "https://drop-assets.ea.com/images/79MfnSWvcjUfNkyYKQorRx/fb7e9c84cca8b5fa5d0add66f26a8a6b/AFB_MADDEN25_DLX-ED_16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5&w=1280",
             editions: true,
             publisher: "Wayord Team"
         }
-        document.title = Product.name+" - Wayord";
+        document.title = Product.name + " - Wayord";
         document.querySelector(".pro-name").innerHTML = Product.name;
         document.querySelector(".pro-about").innerHTML = Product.about;
         document.querySelector(".pro-games").innerHTML = Product.games.join(", ");
@@ -149,15 +159,16 @@
         document.querySelector(".cover2").src = Product.cover;
         document.querySelector(".order-summary-img").src = Product.cover;
         document.querySelector(".order-summary-name").innerHTML = Product.name;
-        if(Product.editions==true){
+        if (Product.editions == true) {
             document.querySelector(".editions").style.display = "block";
         }
-        if(Product.price>0){
+        if (Product.price > 0) {
             document.querySelector(".buy").textContent = "Buy now";
-        }else{
+        } else {
             document.querySelector(".buy").textContent = "Download now";
         }
-        
+
     </script>
 </body>
+
 </html>
