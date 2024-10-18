@@ -101,6 +101,11 @@ header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
 }
 
 /* Product Section's */
+
+section{
+    width: 80%;
+}
+
 .header{
     margin-left: auto;
     margin-right: auto;
@@ -130,6 +135,41 @@ header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
 }
 .buy-header{background-color: $main-color;}
 .buy-header:hover{background-color: adjust-color($color: $main-color, $lightness: -15%);}
+
+.payhip-buy-button{
+    background-color: $main-color;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+    transition: ease-in-out 0.1s;
+    display: block;
+    text-align: center;
+    width: 100%;
+    outline: 0px solid white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: $font;
+}
+.payhip-buy-button:hover{
+    background-color: adjust-color($color: $main-color, $lightness: -15%);
+    animation: borderr 1s ease-out infinite;
+    cursor: pointer;
+}
+.payhip-buy-button:disabled{
+    background-color: #ffffff22;
+    color: #ffffff55;
+    cursor: not-allowed;
+    animation: none;
+}
+@keyframes borderr{
+    0%{outline: 0px solid white;}
+    50%{outline: 8px solid white}
+    100%{outline: 0px solid white;}
+}
+
 .product-information span{color: white;font-weight: 700;font-size: 21px;}
 .p-base{background-color: rgb(83, 83, 83);border-radius: 8px;padding: 5px 8px;color: white;font-weight: 800;user-select: none;width: 30px;font-size: 12px;}
 h1{color:white;font-size: 38px;}
@@ -156,6 +196,44 @@ span,p{color: white;}
 .edition > div span{padding: 1em;font-weight: 600;font-size: 18px;margin-top: 10px;}
 .edition li{color: white;list-style: none;}
 .edition li::before{content: '✓';padding-right: 10px;}
+
+/* Warning */
+$red: #f34848;
+$red-light: #f3484865;
+$yellow: #f3d948;
+$yellow-light: #f3d94865;
+.warning{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    margin-top: 100px;
+    
+    user-select: none;
+    padding: 0 1em;
+    border-radius: 16px;
+
+    p{
+        font-weight: bold;
+    }
+}
+
+.red{
+    background-color: $red-light;
+    border: 1px solid $red-light;
+    p{
+        color: $red;
+    }
+}
+
+.yellow{
+    background-color: $yellow-light;
+    border: 1px solid $yellow-light;
+    p{
+        color: $yellow;
+    }
+}
 
 /* About */
 .about{
