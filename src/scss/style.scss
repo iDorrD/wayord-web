@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Variables */
-$main-color: #5fcaff;
+$main-color: #0128ff;
 $background: rgb(71, 71, 71);
 $background: black;
 $font: 'Space Grotesk', sans-serif;
@@ -16,7 +16,7 @@ body{padding: 0;margin: 0;font-family: $font;background-color: $background;heigh
 header{background-color: adjust-color($color: $background, $lightness: 8%);padding: 0.45em;display: flex;justify-content: space-between;align-items: center;user-select: none;}
 header img{filter: brightness(100) saturate(0) opacity(0.65);width: 75px;transition: ease-out 0.1s;}
 header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
-.menu{color: white;text-decoration: none;padding: 2.5px 14px;border-radius: 8px;}
+.menu{color: white;text-decoration: none;padding: 2.5px 14px;border-radius: 0px;}
 .menu:hover{background-color: #ffffff22;}
 
 .launcher {
@@ -60,7 +60,7 @@ header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
     background-color: #ffffff88;
     border: 1px solid #ffffff99;
     padding: 10px 8.5em;
-    border-radius: 24px;
+    border-radius: 0px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.329);
     color: #fff;
     text-decoration: none;
@@ -81,7 +81,7 @@ header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
     background-color: #ffffff33;
     border: 1px solid #ffffff22; 
     color: white;
-    border-radius: 50%;
+    border-radius: 0%;
     padding: 20px 26px;
     text-decoration: double; 
     z-index: 2;
@@ -102,6 +102,15 @@ header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
 
 /* Product Section's */
 
+.cubic{
+    animation: cubic 0.5s steps(1, end) infinite;
+}
+@keyframes cubic{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;;}
+}
+
 section{
     width: 80%;
 }
@@ -111,6 +120,8 @@ section{
     margin-right: auto;
     max-width: 1440px;
     margin-top: 5px;
+    display: flex;
+    align-items: center;
 }
 .product{
     margin-left: auto;
@@ -125,7 +136,6 @@ section{
     text-decoration: none;
     color: white;
     padding: 10px;
-    border-radius: 16px;
     transition: ease-in-out 0.1s;
     display: block;
     text-align: center;
@@ -141,7 +151,7 @@ section{
     text-decoration: none;
     color: white;
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 0px;
     transition: ease-in-out 0.1s;
     display: block;
     text-align: center;
@@ -171,7 +181,7 @@ section{
 }
 
 .product-information span{color: white;font-weight: 700;font-size: 21px;}
-.p-base{background-color: rgb(83, 83, 83);border-radius: 8px;padding: 5px 8px;color: white;font-weight: 800;user-select: none;width: 30px;font-size: 12px;}
+.p-base{background-color: rgb(83, 83, 83);border-radius: 0px;padding: 5px 8px;color: white;font-weight: 800;user-select: none;width: 30px;font-size: 12px;}
 h1{color:white;font-size: 38px;}
 h2{color: white;font-size: 28px;}
 h3{color: white;font-size: 21px;}
@@ -184,10 +194,10 @@ span,p{color: white;}
     justify-content: space-between;
 }
 .edition > div{
-    background-color: adjust-color($color: $background, $lightness: 15%);
-    border: 1px solid adjust-color($color: $background, $lightness: 20%);
+    background-color: adjust-color($color: $background, $lightness: 5%);
+    border: 1px solid adjust-color($color: $background, $lightness: 10%);
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 0px;
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -212,7 +222,7 @@ $yellow-light: #f3d94865;
     
     user-select: none;
     padding: 0 1em;
-    border-radius: 16px;
+    border-radius: 0px;
 
     p{
         font-weight: bold;
@@ -244,10 +254,10 @@ $yellow-light: #f3d94865;
     max-width: 1440px;
     margin-top: 100px;
     margin-bottom: 100px;
-    background-color: adjust-color($color: $background, $lightness: 15%);
-    border: 1px solid adjust-color($color: $background, $lightness: 20%);
-    padding: 1em;
-    border-radius: 16px;
+    background-color: adjust-color($color: $background, $lightness: 5%);
+    border: 1px solid adjust-color($color: $background, $lightness: 10%);
+    padding: 2em;
+    border-radius: 0px;
 }
 .about p{margin: 0;}
 
@@ -268,10 +278,10 @@ $yellow-light: #f3d94865;
     }
 
     .order-summary {
-        background-color: adjust-color($color: $background, $lightness: 15%);
-        border: 1px solid adjust-color($color: $background, $lightness: 20%);
+        background-color: adjust-color($color: $background, $lightness: 5%);
+        border: 1px solid adjust-color($color: $background, $lightness: 10%);
         padding: 20px;
-        border-radius: 16px;
+        border-radius: 0px;
     }
 
     @keyframes smooth {
@@ -280,14 +290,14 @@ $yellow-light: #f3d94865;
     }
 }
 select{
-    background-color: adjust-color($color: $background, $lightness: 15%);
-    border: 1px solid adjust-color($color: $background, $lightness: 20%);
+    background-color: adjust-color($color: $background, $lightness: 5%);
+    border: 1px solid adjust-color($color: $background, $lightness: 10%);
     font-family: $font;
     font-size: 16px;
     width: 100%;
     height: 60px;
     color: white;
-    border-radius: 16px;
+    border-radius: 0px;
 }
 
 .button-container {
@@ -320,9 +330,9 @@ select{
   .content {
     width: 200px;
     height: 110px;
-    border: 2px solid adjust-color($color: $background, $lightness: 20%);
+    border: 2px solid adjust-color($color: $background, $lightness: 10%);
     background-color: adjust-color($color: $background, $lightness: 5%);
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 10px; 
     text-align: center;
     transition: border 0.3s ease;
@@ -331,7 +341,7 @@ select{
   .content img {
     width: 100px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 0px;
   }
   
   .content p {
@@ -341,11 +351,11 @@ select{
 
   input[type="text"] {
     background-color: adjust-color($color: $background, $lightness: 5%);
-    outline: 2px solid adjust-color($color: $background, $lightness: 20%);
+    outline: 2px solid adjust-color($color: $background, $lightness: 10%);
     font-family: $font;
     color: white;
     padding: 10px 20px;
-    border-radius: 16px;
+    border-radius: 0px;
     border: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
