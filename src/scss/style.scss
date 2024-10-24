@@ -14,7 +14,7 @@ $font: 'Space Grotesk', sans-serif;
 
 body{padding: 0;margin: 0;font-family: $font;background-color: $background;height: 100%;overflow: hidden;}
 header{background-color: adjust-color($color: $background, $lightness: 8%);padding: 0.45em;display: flex;justify-content: space-between;align-items: center;user-select: none;}
-header img{filter: brightness(100) saturate(0) opacity(0.65);width: 75px;transition: ease-out 0.1s;}
+header img{filter: brightness(100) saturate(0) opacity(0.65);width: 100px;transition: ease-out 0.1s;}
 header img:hover{filter: brightness(100) saturate(0) opacity(1);width: 75px;}
 .menu{color: white;text-decoration: none;padding: 2.5px 14px;border-radius: 0px;}
 .menu:hover{background-color: #ffffff22;}
