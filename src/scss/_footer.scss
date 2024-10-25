@@ -1,0 +1,22 @@
+$background: black;
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: adjust-color($color: $background, $lightness: 8%);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+
+    img{
+        filter: brightness(20);
+    }
+    p{
+        font-size: 12px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        color: gray;
+    }
+}
