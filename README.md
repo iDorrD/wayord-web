@@ -1,4 +1,9 @@
-### ![Wayord Logo](./src/img/wayord-transparent-white.png)
+# ![Wayord Logo](./src/img/wayord-transparent-white.png)
+
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/iDorrD/wayord-web?style=for-the-badge&label=ISSUES&labelColor=%23000&color=%230128ff)
+![GitHub last commit](https://img.shields.io/github/last-commit/iDorrD/wayord-web?display_timestamp=committer&style=for-the-badge&label=LAST%20COMMIT&labelColor=%23000&color=%230128ff)
+
+
 
 ## ■ Wayord Repo
 
@@ -12,4 +17,6 @@ Este repositorio contiene la parte primaria del código fundamental y funcionami
 
 - Web Interface
 
-Es una aplicación de Wayord, que se desarrolla para ofrecer los últimos productos, y ofrecer el entretenimiento deseado por la comunidad.
+## ■ Seguridad
+
+Todos los paquetes de este repositorio tienen licencias correspondientes. Consulte el archivo LICENSE para obtener más información.
