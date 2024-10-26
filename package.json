@@ -1,7 +1,7 @@
 {
   "name": "wayord",
-  "version": "0.20",
-  "description": "Enjoy your time with wayord",
+  "version": "0.50",
+  "description": "Enjoy your time with Wayord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

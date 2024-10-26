@@ -1,165 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{name} - Wayord</title>
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../src/img/wayord.png">
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../src/img/wayord.png" />
     <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
-    <script src="https://kit.fontawesome.com/eda7ccd337.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/eda7ccd337.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body style="overflow: auto;">
+  <body style="overflow: auto">
     <div id="checkout" class="checkout">
-        <form method="post" action="https://formspree.io/f/xqakzpnj">
-            <div style="margin-left: auto;margin-right: auto;max-width: 1440px;">
-                <div class="checkout-grid" style="margin-top: 80px;">
-                    <div class="checkout-content">
-                        <p class="exit-checkout " style="color: gray;cursor: pointer;">
-                            <i class="fa-solid fa-chevron-left" style="color: gray;"></i>
-                        </p>
+      <form method="post" action="https://formspree.io/f/xqakzpnj">
+        <div style="margin-left: auto; margin-right: auto; max-width: 1440px">
+          <div class="checkout-grid" style="margin-top: 80px">
+            <div class="checkout-content">
+              <p class="exit-checkout" style="color: gray; cursor: pointer">
+                <i class="fa-solid fa-chevron-left" style="color: gray"></i>
+              </p>
 
-                        <h2>Checkout</h2>
-                        <h3>1. Select your store</h3>
+              <h2>Checkout</h2>
+              <h3>1. Select your store</h3>
 
-                        <div class="button-container" id="minecraft-premium">
-                            <label class="button-item">
-                                <input type="radio" name="select-btn" class="radio-btn" required checked/>
-                                <div class="content">
-                                    <img src="../src/img/wayord-transparent.png"
-                                        alt="Wayord" style="width: 65%;filter: saturate(0) brightness(100);margin-top: 20px;"/>
-                                    <p>Wayord</p>
-                                </div>
-                            </label>
-                        </div>
-                        <h3>2. Enter your username</h3>
-                        <div style="display: block;">
-                            <input type="text" name="username" class="username" placeholder="Wayord"
-                                pattern="[a-zA-Z0-9-]+" maxlength="32" required>
-                        </div>
-                    </div>
-                    <div class="order-summary">
-                        <h3>2. Order Summary</h3>
-                        <img class="order-summary-img" src="" width="390px" style="border-radius: 0px;">
-                        <span class="order-summary-name" style="font-weight: 700;font-size: 18px;"></span>
-                        <hr color="gray">
-                        <br>
-                        <button href="https://payhip.com/b/2xgk7" class="payhip-buy-button" data-theme="none" data-product="2xgk7" disabled>Buy Now</button>
-                        <p style="color: gray;font-size: 12px;padding-top: 10px;">*Product maybe includes VAT</p>
-                    </div>
-                </div>
+              <div class="button-container" id="minecraft-premium">
+                <label class="button-item">
+                  <input
+                    type="radio"
+                    name="select-btn"
+                    class="radio-btn"
+                    required
+                    checked
+                  />
+                  <div class="content">
+                    <img
+                      src="../src/img/wayord-transparent.png"
+                      alt="Wayord"
+                      style="
+                        width: 65%;
+                        filter: saturate(0) brightness(100);
+                        margin-top: 20px;
+                      "
+                    />
+                    <p>Wayord</p>
+                  </div>
+                </label>
+              </div>
+              <h3>2. Enter your username</h3>
+              <div style="display: block">
+                <input
+                  type="text"
+                  name="username"
+                  class="username"
+                  placeholder="Wayord"
+                  pattern="[a-zA-Z0-9-]+"
+                  maxlength="32"
+                  required
+                />
+              </div>
             </div>
-        </form>
+            <div class="order-summary">
+              <h3>2. Order Summary</h3>
+              <img
+                class="order-summary-img"
+                src=""
+                width="390px"
+                style="border-radius: 0px"
+              />
+              <span
+                class="order-summary-name"
+                style="font-weight: 700; font-size: 18px"
+              ></span>
+              <hr color="gray" />
+              <br />
+              <button
+                href="https://payhip.com/b/2xgk7"
+                class="payhip-buy-button"
+                data-theme="none"
+                data-product="2xgk7"
+                disabled
+              >
+                Buy Now
+              </button>
+              <p style="color: gray; font-size: 12px; padding-top: 10px">
+                *Product maybe includes VAT
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
     <header>
-        <div>
-            <a href="/">
-                <img src="/src/img/wayord-transparent.png" alt="Wayord" draggable="false" style="padding-top: 3px;">
-            </a>
-        </div>
-        <div>
-            <a href="https://x.com/Wayord" target="_blank" class="menu"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://discord.com/invite/Q24xrWVYNS" target="_blank" class="menu"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://github.com/iDorrD/wayord-web" target="_blank" class="menu"><i class="fa-brands fa-github"></i></a>
-            <a id="buy" target="_blank" class="menu buy-header" onclick="openCheckout()" style="cursor: pointer;">Buy
-                now</a>
-        </div>
+      <div>
+        <a href="/">
+          <img
+            src="/src/img/wayord-logo-transparent.png"
+            alt="Wayord"
+            draggable="false"
+            style="padding-top: 3px; width: 40px"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="https://x.com/Wayord" target="_blank" class="menu"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://discord.com/invite/Q24xrWVYNS"
+          target="_blank"
+          class="menu"
+          ><i class="fa-brands fa-discord"></i
+        ></a>
+        <a
+          href="https://github.com/iDorrD/wayord-web"
+          target="_blank"
+          class="menu"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          id="buy"
+          target="_blank"
+          class="menu buy-header"
+          onclick="openCheckout()"
+          style="cursor: pointer"
+          >Buy now</a
+        >
+      </div>
     </header>
     <!-- Product header -->
     <section class="header">
-        <h1 style="margin-right: 20px;user-select: none;" class="cubic">■</h1>
-        <h1 class="pro-name"></h1>
+      <h1 style="margin-right: 20px; user-select: none" class="cubic">■</h1>
+      <h1 class="pro-name"></h1>
     </section>
 
     <section class="product">
-        <video autoplay controls src="" width="1080px" style="border-radius: 0px;"></video>
-        <div class="product-information">
-            <img style="border-radius: 0px;" width="300px" class="cover" src="">
-            <div>
-                <div style="display: flex;">
-                    <div class="p-base">Base</div>
-                </div>
+      <video
+        autoplay
+        controls
+        src=""
+        width="1080px"
+        style="border-radius: 0px"
+      ></video>
+      <div class="product-information">
+        <img style="border-radius: 0px" width="300px" class="cover" src="" />
+        <div>
+          <div style="display: flex">
+            <div class="p-base">Base</div>
+          </div>
 
-                <p style="font-size: 14px;">On Wayord starting from</p>
-                <span class="price"></span>
-                <p style="color: gray;font-size: 11px;">Applicable taxes may apply</p>
-                <br>
-                <a id="buy" class="buy" onclick="openCheckout()" style="cursor: pointer;">Buy now</a>
-                <p style="font-size: 12px;line-height: 20px;color: gray;">Product maybe includes VAT</p>
-            </div>
+          <p style="font-size: 14px">On Wayord starting from</p>
+          <span class="price"></span>
+          <p style="color: gray; font-size: 11px">Applicable taxes may apply</p>
+          <br />
+          <a
+            id="buy"
+            class="buy"
+            onclick="openCheckout()"
+            style="cursor: pointer"
+            >Buy now</a
+          >
+          <p style="font-size: 12px; line-height: 20px; color: gray">
+            Product maybe includes VAT
+          </p>
         </div>
+      </div>
     </section>
     <section class="warning yellow">
-        <p><i class="fa-solid fa-triangle-exclamation"></i> The map below is outdated, and is only compatible for version 1.12.2 of the Minecraft.</p>
+      <p>
+        <i class="fa-solid fa-triangle-exclamation"></i> The map below is
+        outdated, and is only compatible for version 1.12.2 of the Minecraft.
+      </p>
     </section>
     <!-- Editions -->
     <section class="editions">
-        <h2>Editions</h2>
-        <div class="edition">
-            <div>
-                <img width="300px" class="cover2" src="">
-                <span>Standard Edition</span>
-                <li>---</li>
-            </div>
+      <h2>Editions</h2>
+      <div class="edition">
+        <div>
+          <img width="300px" class="cover2" src="" />
+          <span>Standard Edition</span>
+          <li>---</li>
         </div>
+      </div>
     </section>
     <!-- About-->
     <section class="about">
-        <h3>About</h3>
-        <p class="pro-about"></p>
-        <h3>Games</h3>
-        <p class="pro-games"></p>
-        <h3>Languages</h3>
-        <p class="pro-langs"></p>
-        <h3>Publisher</h3>
-        <p class="pro-publisher"></p>
+      <h3>About</h3>
+      <p class="pro-about"></p>
+      <h3>Games</h3>
+      <p class="pro-games"></p>
+      <h3>Languages</h3>
+      <p class="pro-langs"></p>
+      <h3>Publisher</h3>
+      <p class="pro-publisher"></p>
     </section>
+
+    <footer>
+      <div style="margin: auto; width: 80%" class="section">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="/src/img/wayord-logo-transparent.png"
+              alt="Wayord"
+              draggable="false"
+              width="40px"
+            />
+          </a>
+        </div>
+        <div class="others">
+          <div class="exactly-section">
+            <h4>Compañía</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="terms-of-service.html">Términos</a>
+          </div>
+        </div>
+      </div>
+      <hr color="#333" style="width: 80%" />
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          margin: auto;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: gray">All Rights Reserved &copy 2024</p>
+        </div>
+        <div>
+          <a href="https://x.com/wayord" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://discord.com/invite/Q24xrWVYNS" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="https://github.com/iDorrD/wayord-web" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Product JS -->
     <script src="../src/js/script.js"></script>
     <script>
-        const Product = {
-            name: "CatLak VI - Original Map",
-            price: 2.99,
-            games: ["Minecraft"],
-            about: "¿Recordar viejos momentos? Vuelve al pueblo de cómo empezó y como acabo la historia.<br>¡Vuelve a CatLak VI!",
-            languages: ["Spanish"],
-            video: "../src/video/video1.mp4",
-            cover: "./imgs/catlakvi-originalmap.png",
-            editions: false,
-            publisher: "Wayord Team"
-        }
-        document.title = Product.name + " - Wayord";
-        document.querySelector(".pro-name").innerHTML = Product.name;
-        document.querySelector(".pro-about").innerHTML = Product.about;
-        document.querySelector(".pro-games").innerHTML = Product.games.join(", ");
-        document.querySelector(".pro-langs").innerHTML = Product.languages.join(", ");
-        document.querySelector(".pro-publisher").innerHTML = Product.publisher;
-        document.querySelector(".price").innerHTML = `€<span style="font-size: 26.5px;">${Product.price}</span>`;
-        document.querySelector("video").src = Product.video;
-        document.querySelector(".cover").src = Product.cover;
-        document.querySelector(".cover2").src = Product.cover;
-        document.querySelector(".order-summary-img").src = Product.cover;
-        document.querySelector(".order-summary-name").innerHTML = Product.name;
-        if (Product.editions == true) {
-            document.querySelector(".editions").style.display = "block";
-        }
-        if (Product.price > 0) {
-            document.querySelector(".buy").textContent = "Buy now";
-        } else {
-            document.querySelector(".buy").textContent = "Download now";
-        }
-        document.querySelector(".username").addEventListener("input", function () {
-            if (this.value == "") {
-                document.querySelector(".payhip-buy-button").disabled = true;
-            } else {
-                document.querySelector(".payhip-buy-button").disabled = false;
-            }
+      const Product = {
+        name: "CatLak VI - Original Map",
+        price: 2.99,
+        games: ["Minecraft"],
+        about:
+          "¿Recordar viejos momentos? Vuelve al pueblo de cómo empezó y como acabo la historia.<br>¡Vuelve a CatLak VI!",
+        languages: ["Spanish"],
+        video: "../src/video/video1.mp4",
+        cover: "./imgs/catlakvi-originalmap.png",
+        editions: false,
+        publisher: "Wayord Team",
+      };
+      document.title = Product.name + " - Wayord";
+      document.querySelector(".pro-name").innerHTML = Product.name;
+      document.querySelector(".pro-about").innerHTML = Product.about;
+      document.querySelector(".pro-games").innerHTML = Product.games.join(", ");
+      document.querySelector(".pro-langs").innerHTML =
+        Product.languages.join(", ");
+      document.querySelector(".pro-publisher").innerHTML = Product.publisher;
+      document.querySelector(
+        ".price"
+      ).innerHTML = `€<span style="font-size: 26.5px;">${Product.price}</span>`;
+      document.querySelector("video").src = Product.video;
+      document.querySelector(".cover").src = Product.cover;
+      document.querySelector(".cover2").src = Product.cover;
+      document.querySelector(".order-summary-img").src = Product.cover;
+      document.querySelector(".order-summary-name").innerHTML = Product.name;
+      if (Product.editions == true) {
+        document.querySelector(".editions").style.display = "block";
+      }
+      if (Product.price > 0) {
+        document.querySelector(".buy").textContent = "Buy now";
+      } else {
+        document.querySelector(".buy").textContent = "Download now";
+      }
+      document
+        .querySelector(".username")
+        .addEventListener("input", function () {
+          if (this.value == "") {
+            document.querySelector(".payhip-buy-button").disabled = true;
+          } else {
+            document.querySelector(".payhip-buy-button").disabled = false;
+          }
         });
-
     </script>
-</body>
-
+  </body>
 </html>
