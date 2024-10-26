@@ -24,17 +24,20 @@ body {
   font-family: $font;
   background-color: $background;
   height: 100%;
+  padding-top: 100px;
 }
 header {
-  background-color: adjust-color($color: $background, $lightness: 8%);
+  background-color: rgba(adjust-color($background, $lightness: 8%), 1);
   padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  width: 100%;
   position: fixed;
-  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 header img {
   filter: brightness(100) saturate(0) opacity(0.65);
@@ -43,6 +46,9 @@ header img {
 }
 header img:hover {
   filter: brightness(100) saturate(0) opacity(1);
+}
+main {
+  margin-top: calc(1em + 8%);
 }
 .menu {
   color: white;
