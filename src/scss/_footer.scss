@@ -1,22 +1,68 @@
 $background: black;
 footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: adjust-color($color: $background, $lightness: 8%);
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
+
+    .section{
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+    }
 
     img{
         filter: brightness(20);
     }
     p{
         font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
     }
     .logo{
         display: flex;
         align-items: center;
         color: gray;
+    }
+
+    // Sections
+
+    .others{
+        display: flex;
+        margin: 2em 0 ;
+    }
+
+    .exactly-section{
+        h4{
+            color: white;
+            margin: 0 0 1em 0;
+        }
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: left;
+        margin: 0 2em;
+        a{
+            font-size: 15px;
+            text-decoration: none;
+            color: gray;
+            transition: ease-in-out 0.3s;
+            line-height: 1.5;
+        }
+        a:hover{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    i{
+        color: gray;
+        transition: ease-in-out 0.3s;
+        margin: 0 0.5rem;
+    }
+    i:hover{
+        color: white;
     }
 }
