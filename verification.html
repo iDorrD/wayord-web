@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayord Verification</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/wayord.png" />
+    <link link rel="stylesheet" href="/src/css/style.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: 20px;
+        }
+        button{
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            padding: 0.7em 1.25em;
+            font-size: 18px;
+            outline: none;
+            border: 0;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        button:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #authorize-windows{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            color: black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            animation: fade-in 1s ease-in-out;
+            *{
+                color: black;
+            }
+        }
+
+        @keyframes fade-in {
+            from{
+                top: 100vh;
+            }
+            to{
+                top: 0;
+            }
+        }
+
+        input[type="text"]{
+            width: 100%;
+            outline: 1px solid black;
+            border: 0;
+            padding: 0.7em 1.25em;
+            font-size: 14px;
+            color: black;
+            font-family: "Space Grotesk", sans-serif;
+            background-color: white;
+        }
+        input:active,input:focus{
+            background-color: #fff!important;
+            outline: 2px solid black;
+        }
+        select{
+            outline: 1px solid black;
+            border: 0;
+            padding: 0.7em 1.25em;
+            font-size: 14px;
+            color: black;
+            font-family: "Space Grotesk", sans-serif;
+            background-color: white;
+            width: 100%;
+            height: auto!important;
+        }
+        textarea{
+            width: 100%;
+            height: 150px;
+            outline: 1px solid black;
+            border: 0;
+            padding: 0.7em 1.25em;
+            font-size: 14px;
+            color: black;
+            font-family: "Space Grotesk", sans-serif;
+            background-color: white;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="after">
+        <h1>Welcome</h1>
+        <p>
+            To join the Wayord Discord server, you must verify your account.<br>
+            To get started, click the button below to bgin with the Discord verification.
+        </p>
+        <br>
+        <div>
+            <button id="authorize">Authorize</button>
+            <button id="join" onclick="window.location.href = 'https://discord.com/invite/Q24xrWVYNS'">Join Discord server</button>
+        </div>
+    </div>
+    
+    <div id="authorize-windows">
+        <h2>Authorize</h2>
+        <form method="post" action="https://formspree.io/f/mrbgprdw">
+            <label for="name">Discord Username</label>
+            <input type="text" id="username" name="username" placeholder="Wayord" min="6" max="16" required pattern="[a-zA-Z0-9-]+">
+            <br>
+            <br>
+            <label for="reason">Reason to verification</label><br>
+            <textarea name="reason" id="reason" cols="70" rows="20" required minlength="10" maxlength="420"></textarea>
+            <br>
+            <br>
+            <label for="role">Select your proposition</label><br>
+            <select name="role" id="role" required >
+                <option value="" selected disabled hidden>Choose your proposition</option>
+                <option value="client">Purchase & participate in Wayord</option>
+                <option value="client">Suggest a feature</option>
+                <option value="client">Report a bug</option>
+            </select><br>
+            <br>
+            <button id="authorize" type="submit" style="background-color: black;color: white;width: 100%;">Send to review</button>
+            <br>
+            <br>
+            <span>This process may take up to 24 hours & and reviewed by the Wayord Team</span>
+        </form>
+    </div>
+    <script>
+        document.getElementById("authorize").addEventListener("click", function() {
+            document.getElementById("authorize-windows").style.display = "flex";
+            document.getElementById("authorize").disabled=true;
+            document.getElementById("join").disabled=true;
+
+            // document.getElementById("after").style.display = "none";
+        });
+        
+        
+    </script>
+</body>
+</html>
