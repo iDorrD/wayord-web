@@ -80,7 +80,7 @@
                 class="order-summary-img"
                 src=""
                 width="390px"
-                style="border-radius: 0px"
+                style="border-radius: 24px"
               />
               <span
                 class="order-summary-name"
@@ -93,7 +93,7 @@
                 id="buy"
                 target="_blank"
                 class="menu buy-header"
-                style="cursor: pointer; padding: 1em 10em; border-radius: 0px"
+                style="cursor: pointer; padding: 1em 10em; border-radius: 24px"
                 name="Buy now"
                 value="Buy now"
               />
@@ -148,9 +148,9 @@
     </section>
 
     <section class="product">
-      <img class="cover-img" src="" style="border-radius: 0px" width="1080px" />
+      <img class="cover-img" src="" style="border-radius: 24px" width="1080px" />
       <div class="product-information">
-        <img style="border-radius: 0px" width="300px" class="cover" src="" />
+        <img style="border-radius: 24px" width="300px" class="cover" src="" />
         <div>
           <div style="display: flex">
             <div class="p-base">Base</div>
@@ -165,7 +165,7 @@
             class="buy"
             onclick="openCheckout()"
             style="cursor: pointer"
-            >Buy now</a
+            >Comprar ahora</a
           >
           <p style="font-size: 12px; line-height: 20px; color: gray">
             In-game Purchases (Includes Random Items)
@@ -246,74 +246,37 @@
     <!-- Product JS -->
     <script src="../src/js/script.js"></script>
     <script>
-      const Product = {
-        name: "Blockier Resource Pack",
-        price: 0.0,
-        games: ["Minecraft"],
-        about:
-          "Blockier is an optimisation resource pack for Minecraft 1.20+ that improves performance and reduces lag. <br>Disabling unnecessary particles and changes particles by reducing their quantity.<br>The resource pack is perfect to your Survival and/or optimize your game.",
-        languages: [
-          "English",
-          "Spanish",
-          "French",
-          "German",
-          "Italian",
-          "Japanese",
-          "Korean",
-          "Dutch",
-          "Polish",
-          "Portuguese",
-          "Russian",
-          "Chinese",
-        ],
-        video: [
-          "https://cdn.modrinth.com/data/cached_images/4ebace599addc235c52980f3b55d2c61570e1140.png",
-          "https://cdn.modrinth.com/data/cached_images/df59049d7a9d79278500a0f7fd0f5aedf8753f7a.png",
-          "https://cdn.modrinth.com/data/cached_images/b723ba8148ee5e3a8f6152148be06b0cd56c6a8f.png",
-          "https://cdn.modrinth.com/data/cached_images/d25867a18184090b13ea79d6ca3a4d86f5cc1087.png",
-        ],
-        cover: "imgs/blockier.webp",
-        editions: false,
-        publisher: "DorrD",
-      };
-      document.title = Product.name + " - Wayord";
-      document.querySelector(".pro-name").innerHTML = Product.name;
-      document.querySelector(".pro-about").innerHTML = Product.about;
-      document.querySelector(".pro-games").innerHTML = Product.games.join(", ");
-      document.querySelector(".pro-langs").innerHTML =
-        Product.languages.join(", ");
-      document.querySelector(".pro-publisher").innerHTML = Product.publisher;
-      document.querySelector(
-        ".price"
-      ).innerHTML = `€<span style="font-size: 26.5px;">${Product.price}</span>`;
-      // document.querySelector(".cover-img").src = Product.video[0];
-      document.querySelector(".cover").src = Product.cover;
-      document.querySelector(".cover2").src = Product.cover;
-      document.querySelector(".order-summary-img").src = Product.cover;
-      document.querySelector(".order-summary-name").innerHTML = Product.name;
-      if (Product.editions == true) {
-        document.querySelector(".editions").style.display = "block";
-      }
-      if (Product.price > 0) {
-        document.querySelector(".buy").textContent = "Buy now";
-      } else {
-        document.querySelector(".buy").textContent = "Download now";
-      }
-
-      let currentIndex = 0;
-      function changeImage() {
-        const coverImg = document.querySelector(".cover-img");
-        if (coverImg && Product.video.length > 0) {
-          coverImg.src = Product.video[currentIndex];
-          currentIndex = (currentIndex + 1) % Product.video.length;
-        }
-      }
-
-      // Cambia la imagen cada 3 segundos
-      setInterval(changeImage, 2000);
-
-      // Inicializa la primera imagen
-      changeImage();
+      fetch("./json/productos.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("No se pudo cargar el archivo JSON");
+          }
+          return response.json(); // Convierte la respuesta en JSON
+        })
+        .then((products) => {
+          const product = products[0]; // Selecciona el producto
+          document.title = `${product.name} - Wayord`;
+          document.querySelector(".pro-name").textContent = product.name;
+          document.querySelector(".pro-about").textContent = product.description;
+          document.querySelector(".price").innerHTML = `€<span style="font-size: 26.5px;">${product.price}</span>`;
+          document.querySelector(".cover-img").src = product.image_url;
+          document.querySelector(".cover").src = product.image_url;
+          document.querySelector(".cover2").src = product.image_url;
+          document.querySelector(".pro-games").textContent = product.games;
+          document.querySelector(".pro-langs").textContent = product.languages;
+          document.querySelector(".pro-publisher").textContent = product.publisher;
+          document.querySelector("video").src = product.video;
+          document.querySelector(".order-summary-img").src = product.image_url;
+          document.querySelector(".order-summary-name").textContent =
+            product.name;
+          document.querySelector(".order-summary-price").textContent =
+            product.price;
+          document.querySelector(".order-summary-description").textContent =
+            product.description;
+        })
+        .catch((error) =>
+          console.error("Error cargando los productos:", error)
+        );
     </script>
   </body>
 </html>

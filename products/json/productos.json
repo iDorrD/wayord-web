@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Blockier Resource Pack",
+        "price": 0.0,
+        "description": "Blockier is an optimisation resource pack for Minecraft...",
+        "image_url": "imgs/blockier.webp",
+        "publisher": "DorrD",
+        "languages": [
+            "English",
+            "Spanish",
+            "French"
+        ],
+        "games": [
+            "Minecraft"
+        ]
+    }
+]

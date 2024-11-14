@@ -1,13 +1,13 @@
 /* Fonts imported */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "_footer.scss";
 
 /* Variables */
-$main-color: #0070ff;
+$main-color: #26BAFE;
 $background: rgb(71, 71, 71);
-$background: black;
-$font: "Space Grotesk", sans-serif;
+$background: #101014;
+$font: "Inter", sans-serif;
 
 html {
   scroll-behavior: smooth;
@@ -29,10 +29,15 @@ body {
   background-color: $background;
   height: 100%;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 header {
-  background-color: rgba(adjust-color($background, $lightness: 8%), 1);
+  background-color: rgba(19, 19, 22,0.65);
+  border: 1px solid rgba(adjust-color($background, $lightness: 12%), 0.75);
   padding: 1em;
+  margin: 1em;
+  border-radius: 24px;
+  backdrop-filter: blur(24px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,6 +312,7 @@ section {
   margin-top: 5px;
   display: flex;
   align-items: center;
+  font-weight: 900;
 }
 .product {
   margin-left: auto;
@@ -315,18 +321,21 @@ section {
   display: flex;
   justify-content: space-between;
   line-height: 0.9;
+  gap: 1em;
 }
 .buy {
   background-color: $main-color;
   text-decoration: none;
-  color: white;
-  padding: 10px;
-  transition: ease-in-out 0.1s;
+  color: #000;
+  font-size: 15px;
+  padding: 18px;
   display: block;
   text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
 }
 .buy:hover {
-  background-color: adjust-color($color: $main-color, $lightness: -15%);
+  background-color: adjust-color($color: $main-color, $lightness: 10%);
 }
 .buy-header {
   background-color: $main-color;
@@ -374,7 +383,11 @@ section {
     outline: 0px solid white;
   }
 }
-
+.product-information{
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
 .product-information span {
   color: white;
   font-weight: 700;
