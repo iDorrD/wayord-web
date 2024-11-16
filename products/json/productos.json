@@ -5,11 +5,15 @@
         "price": 0.0,
         "description": "Blockier is an optimisation resource pack for Minecraft...",
         "image_url": "imgs/blockier.webp",
-        "publisher": "DorrD",
+        "images": [
+            "imgs/blockier.webp",
+            "https://cdn.modrinth.com/data/cached_images/4ebace599addc235c52980f3b55d2c61570e1140.png",
+            "https://cdn.modrinth.com/data/cached_images/df59049d7a9d79278500a0f7fd0f5aedf8753f7a.png"
+        ],
+        "publisher": "DorrD & Wayord Team",
         "languages": [
             "English",
-            "Spanish",
-            "French"
+            "Spanish"
         ],
         "games": [
             "Minecraft"

@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="../src/css/style.css" />
     <link rel="icon" type="image/x-icon" href="../src/img/wayord.png" />
-
+    <script src="../src/js/carousel.js"></script>
     <script
       src="https://kit.fontawesome.com/eda7ccd337.js"
       crossorigin="anonymous"
@@ -143,20 +143,26 @@
     </header>
     <!-- Product header -->
     <section class="header">
-      <h1 style="margin-right: 20px; user-select: none" class="cubic">■</h1>
-      <h1 class="pro-name"></h1>
+      <h1 class="pro-name" style="font-size: 42px;"></h1>
     </section>
 
     <section class="product">
-      <img class="cover-img" src="" style="border-radius: 24px" width="1080px" />
+      <div class="carousel">
+        <button class="arrow left" onclick="prevImage()">❮</button>
+        <div class="image-container">
+          <img src="" id="image1">
+          <img src="" id="image2">
+          <img src="" id="image3">
+        </div>
+        <button class="arrow right" onclick="nextImage()">❯</button>
+      </div>
       <div class="product-information">
         <img style="border-radius: 24px" width="300px" class="cover" src="" />
         <div>
           <div style="display: flex">
-            <div class="p-base">Base</div>
+            <div class="p-base">Resource Pack</div>
           </div>
-
-          <p style="font-size: 14px">On Wayord starting from</p>
+          <br>
           <span class="price"></span>
           <p style="color: gray; font-size: 11px">Applicable taxes may apply</p>
           <br />
@@ -186,13 +192,12 @@
     </section>
     <!-- About-->
     <section class="about">
-      <h3>About</h3>
       <p class="pro-about"></p>
-      <h3>Games</h3>
+      <h3 style="background-color: #222;width: fit-content;border-radius: 24px;padding: 0.25em 1em;">Games</h3>
       <p class="pro-games"></p>
-      <h3>Languages</h3>
+      <h3 style="background-color: #222;width: fit-content;border-radius: 24px;padding: 0.25em 1em;">Languages</h3>
       <p class="pro-langs"></p>
-      <h3>Publisher</h3>
+      <h3 style="background-color: #222;width: fit-content;border-radius: 24px;padding: 0.25em 1em;">Publisher</h3>
       <p class="pro-publisher"></p>
     </section>
 
@@ -258,15 +263,15 @@
           document.title = `${product.name} - Wayord`;
           document.querySelector(".pro-name").textContent = product.name;
           document.querySelector(".pro-about").textContent = product.description;
-          document.querySelector(".price").innerHTML = `€<span style="font-size: 26.5px;">${product.price}</span>`;
-          document.querySelector(".cover-img").src = product.image_url;
+          document.querySelector(".price").innerHTML = `${product.price}€`;
+          document.querySelector("#image1").src = product.images[0];
+          document.querySelector("#image2").src = product.images[1];
+          document.querySelector("#image3").src = product.images[2];
           document.querySelector(".cover").src = product.image_url;
           document.querySelector(".cover2").src = product.image_url;
           document.querySelector(".pro-games").textContent = product.games;
           document.querySelector(".pro-langs").textContent = product.languages;
           document.querySelector(".pro-publisher").textContent = product.publisher;
-          document.querySelector("video").src = product.video;
-          document.querySelector(".order-summary-img").src = product.image_url;
           document.querySelector(".order-summary-name").textContent =
             product.name;
           document.querySelector(".order-summary-price").textContent =
