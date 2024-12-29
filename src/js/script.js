@@ -1,3 +1,4 @@
+document.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";  // Redirigir a un video de Rick Astley
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
 }, false);
